@@ -21,11 +21,8 @@ app.post("/api/patron", (req, res) => {
   fetch(url, {
     method: "POST",
     headers: {
-      // "x-api-key": process.env.LIBIB_API_KEY,
-      // "x-api-user": process.env.LIBIB_API_USER
-      "x-api-key":
-        "90da77e4bbe81857a040fe09e49d1b869e29923c2dce169d73d877bef02d24db",
-      "x-api-user": "33b5682b44ff7d7b8a9209ff454746ab16f3e006"
+      "x-api-key": process.env.LIBIB_API_KEY,
+      "x-api-user": process.env.LIBIB_API_USER
     }
   })
     .then(r => r.json())
