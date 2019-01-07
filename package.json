@@ -1,0 +1,22 @@
+{
+  "name": "nyva-libib-patron-reg",
+  "version": "1.0.0",
+  "main": "server.js",
+  "license": "MIT",
+  "scripts": {
+    "client": "cd client && yarn start",
+    "server": "node server.js",
+    "dev:server": "nodemon server.js",
+    "dev": "concurrently --kill-others-on-fail \"yarn dev:server\" \"yarn client\"",
+    "heroku-postbuild": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
+  },
+  "dependencies": {
+    "express": "^4.16.4",
+    "node-fetch": "^2.3.0",
+    "nodemon": "^1.18.9",
+    "query-string": "^6.2.0"
+  },
+  "devDependencies": {
+    "concurrently": "^4.1.0"
+  }
+}
